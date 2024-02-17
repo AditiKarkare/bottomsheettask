@@ -1,5 +1,6 @@
 import 'package:fe_test/features/homeScreen/view/widget/tile_Widget.dart';
 import 'package:fe_test/features/homeScreen/view/widget/titlevalue_widget.dart';
+import 'package:fe_test/features/vehicles/view/widget/image_Carousel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -66,13 +67,8 @@ _vehicleDetails(BuildContext context) {
                     ],
                   ),
                 ),
-                Container(
-                  margin:
-                      const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
-                  height: 179,
-                  width: double.infinity,
-                  color: Colors.red,
-                  child: const FlutterLogo(),
+                const ImageCarousel(
+                  heght: 179,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(
@@ -175,7 +171,54 @@ _vehicleDetails(BuildContext context) {
                     ],
                   ),
                 ),
-                const CommonDivider(), SizedBox(height: 10.h),
+                const CommonDivider(),
+                SizedBox(height: 10.h),
+                const TitleWidget(title: "Bank Notes :"),
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey),
+                      borderRadius: BorderRadius.circular(10)),
+                  child: const Column(
+                    children: [
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "• ",
+                            style: TextStyle(fontWeight: FontWeight.w900),
+                          ),
+                          SizedBox(width: 10),
+                          Flexible(
+                            child: Text(
+                              "Once Approval received Payment has to be deposited in 2 working days.",
+                            ),
+                          )
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "• ",
+                            style: TextStyle(fontWeight: FontWeight.w900),
+                          ),
+                          SizedBox(width: 10),
+                          Flexible(
+                            child: Text(
+                              "All RTO fine need to be check before bidding.",
+                            ),
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 10.h),
                 const TitleWidget(title: "Legal Identification :"),
                 SizedBox(height: 4.h),
                 const Padding(

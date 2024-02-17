@@ -9,7 +9,7 @@ void main() {
     providers: [
       ChangeNotifierProvider(create: (context) => HomeScreenController()),
     ],
-    child: MyApp(),
+    child: const MyApp(),
   ));
 }
 
@@ -26,9 +26,10 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'CAR BX',
         theme: ThemeData(
-          primaryColor: Color(0xff345BA5),
+          primaryColor: const Color(0xff345BA5),
           colorScheme: ColorScheme.fromSeed(
-              seedColor: Colors.deepPurple, primary: Color(0xff345BA5)),
+              seedColor: const Color(0xff345BA5),
+              primary: const Color(0xff345BA5)),
           useMaterial3: false,
         ),
         home: const HomeNavigationPage(),
