@@ -1,5 +1,6 @@
 import 'package:fe_test/features/homeScreen/controller/homeScreen_controller.dart';
 import 'package:fe_test/features/homeScreen/view/home_navigation.dart';
+import 'package:fe_test/features/vehicles/view/card_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
               primary: const Color(0xff345BA5)),
           useMaterial3: false,
         ),
-        home: const HomeNavigationPage(),
+        // home: const HomeNavigationPage(),
+        home: const CardPage(),
       ),
     );
   }

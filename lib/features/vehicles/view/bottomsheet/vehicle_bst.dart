@@ -308,7 +308,32 @@ _vehicleDetails(BuildContext context) {
                   Container(
                     width: 209.w,
                     height: 40,
-                    color: Colors.grey,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey),
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 20),
+                          child: Text(
+                            "₹ 1,35,00,000",
+                            style: TextStyle(fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Container(
+                          height: 40,
+                          decoration: BoxDecoration(
+                              color: Colors.grey.shade100,
+                              borderRadius: const BorderRadius.only(
+                                  topRight: Radius.circular(10),
+                                  bottomRight: Radius.circular(10))),
+                          alignment: Alignment.center,
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          child: const Text("+"),
+                        )
+                      ],
+                    ),
                   ),
                   Container(
                     width: 120.w,

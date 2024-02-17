@@ -12,7 +12,7 @@ class TitleValueTile extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 6.h),
       child: Row(
         children: [
-          SizedBox(width: 100.w, child: Text("$title. :")),
+          SizedBox(width: 75.w, child: Text("$title. :")),
           Text(value),
         ],
       ),
