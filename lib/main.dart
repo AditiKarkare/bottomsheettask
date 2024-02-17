@@ -33,8 +33,8 @@ class MyApp extends StatelessWidget {
               primary: const Color(0xff345BA5)),
           useMaterial3: false,
         ),
-        // home: const HomeNavigationPage(),
-        home: const CardPage(),
+        home: const HomeNavigationPage(),
+        // home: const CardPage(),
       ),
     );
   }

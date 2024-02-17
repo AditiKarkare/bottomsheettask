@@ -1,7 +1,9 @@
 import 'package:fe_test/features/homeScreen/view/widget/tile_Widget.dart';
 import 'package:fe_test/features/homeScreen/view/widget/titlevalue_widget.dart';
+import 'package:fe_test/features/vehicles/view/card_page.dart';
 import 'package:fe_test/features/vehicles/view/widget/image_Carousel.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class VehicleBst {
@@ -35,36 +37,42 @@ _vehicleDetails(BuildContext context) {
               controller: scrollController,
               padding: const EdgeInsets.symmetric(vertical: 10),
               children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Mahindra Scorpio N",
-                            style: TextStyle(
-                                fontSize: 21.sp,
-                                color: const Color(0xff333333)),
-                          ),
-                          Text(
-                            "MH 32 DF 7865 . 2016",
-                            style: TextStyle(
-                                fontSize: 18.sp,
-                                color: const Color(0xff797979)),
-                          ),
-                        ],
-                      ),
-                      IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.favorite_border_rounded,
-                            color: Colors.red,
-                            size: 30.sp,
-                          ))
-                    ],
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (_) => CardPage()));
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Mahindra Scorpio N",
+                              style: TextStyle(
+                                  fontSize: 21.sp,
+                                  color: const Color(0xff333333)),
+                            ),
+                            Text(
+                              "MH 32 DF 7865 . 2016",
+                              style: TextStyle(
+                                  fontSize: 18.sp,
+                                  color: const Color(0xff797979)),
+                            ),
+                          ],
+                        ),
+                        IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.favorite_border_rounded,
+                              color: Colors.red,
+                              size: 30.sp,
+                            ))
+                      ],
+                    ),
                   ),
                 ),
                 const ImageCarousel(

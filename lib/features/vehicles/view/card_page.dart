@@ -1,4 +1,5 @@
 import 'package:fe_test/features/homeScreen/view/widget/titlevalue_widget.dart';
+import 'package:fe_test/features/vehicles/view/widget/image_Carousel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -20,7 +21,7 @@ class _CardPageState extends State<CardPage> {
         child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: SizedBox(
-              height: 650,
+              height: 700,
               child: Stack(
                 children: [
                   Card(
@@ -28,7 +29,7 @@ class _CardPageState extends State<CardPage> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      padding: const EdgeInsets.only(top: 20, bottom: 50),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
@@ -49,9 +50,8 @@ class _CardPageState extends State<CardPage> {
                               ],
                             ),
                           ),
-                          Container(
-                            height: 200,
-                            color: Colors.green,
+                          const ImageCarousel(
+                            heght: 179,
                           ),
                           const SizedBox(
                             height: 10,
@@ -314,9 +314,39 @@ class _CardPageState extends State<CardPage> {
                       children: [
                         ElevatedButton(
                             onPressed: () {},
-                            child: Icon(
-                              Icons.check_box_outline_blank_sharp,
-                              color: Colors.green,
+                            style: ElevatedButton.styleFrom(
+                                shape: const CircleBorder(),
+                                backgroundColor: Colors.white),
+                            child: const Padding(
+                              padding: EdgeInsets.all(20),
+                              child: Icon(
+                                Icons.check_box_outline_blank_sharp,
+                                color: Colors.green,
+                              ),
+                            )),
+                        ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                                shape: const CircleBorder(),
+                                backgroundColor: Colors.white),
+                            child: const Padding(
+                              padding: EdgeInsets.all(20),
+                              child: Icon(
+                                Icons.favorite_border,
+                                color: Colors.red,
+                              ),
+                            )),
+                        ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                                shape: const CircleBorder(),
+                                backgroundColor: Colors.white),
+                            child: const Padding(
+                              padding: EdgeInsets.all(20),
+                              child: Icon(
+                                Icons.share_rounded,
+                                color: Colors.blue,
+                              ),
                             ))
                       ],
                     ),
