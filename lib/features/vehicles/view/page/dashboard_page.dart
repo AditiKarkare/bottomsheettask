@@ -57,7 +57,12 @@ class DashboardPage extends StatelessWidget {
                   child: Row(
                     children: [
                       SizedBox(
-                          width: 51.sp, height: 51.sp, child: FlutterLogo()),
+                          width: 51.sp,
+                          height: 51.sp,
+                          child: Image.asset(
+                            "asset/image/car1.png",
+                            fit: BoxFit.cover,
+                          )),
                       SizedBox(width: 15.w),
                       Flexible(
                         child: Padding(
